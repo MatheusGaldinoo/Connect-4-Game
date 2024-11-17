@@ -1,4 +1,4 @@
-# Connect Four - Terminal Game - Matheus Galdino - 28.10.2024
+# Connect Four - Terminal Game - Matheus Galdino
 
 def startGame():
     DEFAULT_GRID = [[0, 0, 0, 0, 0, 0, 0],
@@ -64,9 +64,9 @@ def printGrid(grid):
     for lin in range(len(grid)):
         for col in range(len(grid[lin])):
             if grid[lin][col] == 1:
-                print("|⬜", end="")
+                print("|🟡", end="")
             elif grid[lin][col] == 2:
-                print("|⬛", end="")
+                print("|🔴", end="")
             else:
                 print("|  ", end="")
         print("|")
@@ -166,10 +166,9 @@ def isFull(grid):
 
 def color(player):
     if player == 1:
-        return "⬜"
+        return "🟡"
     else:
-        return "⬛"
+        return "🔴"
 
 if __name__ == '__main__':
     startGame()
-
